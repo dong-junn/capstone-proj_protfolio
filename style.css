@@ -1,0 +1,1195 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu&family=Gugi&family=Nanum+Brush+Script&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #18181B;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.nav-logo{
+    max-width: 100px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #1d4ed8, #60a5fa);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.link a:hover{
+    color: #60a5fa;
+}
+
+.link a:hover::after{
+    width: 100%;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.content{ 
+    animation: moveFromLeft 1s ease-out forwards;
+}
+
+@keyframes moveFromLeft{
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.image {
+    position: absolute; 
+    width: 100%; 
+    text-align: center; 
+    right: 0; 
+    animation: moveFromRight 1s ease-out forwards; 
+}
+
+@keyframes moveFromRight {
+    0% {
+        transform: translateX(100%); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+header .image{
+    position: relative;
+}
+
+header .image::before{
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.features .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.features .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.features .card img {
+    border-radius: 5px;
+}
+
+.features .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.features .projct{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .projct span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features .projct h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.features .projct p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.features .projct img {
+    border-radius: 5px;
+}
+
+.features .projct a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.worked {
+    display: inline;
+}
+
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}
+
+.pricing{
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.card {
+    width: 100%;
+    background-color: #27272a;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.certifi {
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%;
+    overflow: hidden;
+}
+
+.certifi img,
+.certifi video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #27272a;
+}
+
+.pricing .projct{
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+
+
+.pricing .card .content{
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.pricing .projct .content{
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.pricing .card h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.pricing .card h3{
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #fff;
+}
+
+.pricing .card p{
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.pricing .card p i{
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.pricing .card button{
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.pricing .card button:hover{
+    background-color: #1e40af;
+    border-color: #1e40af;
+}
+
+.section-c {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-c .header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.career {
+    position: relative;
+    padding-top: 66.67%;
+    background: transparent;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.career img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* hover 효과 */
+.career:hover img {
+    opacity: 0.3;
+}
+
+.career:hover .overlay-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: right;  
+    padding: 2rem;  
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+}
+
+footer .column {
+    display: inline-block;  
+    margin-right: 20px;  
+}
+
+footer .column h4 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;  
+}
+
+footer .column > a {
+    color: #ccc;
+    font-size: 1.5rem;
+    display: block;  
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+}
+
+footer .column > a:hover {
+    color: #1d4ed8;  
+}
+
+
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+}
+
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+    .features{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px){
+    header .image::before{
+        display: none;
+    }
+
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}
+
+.pricing .card .certifi a {
+    color: #fff;
+    font-size: 2rem;
+    text-align: left;
+    padding: 1rem;
+    display: block;
+    background-color: #27272a;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin-left: 2rem;
+    position: relative;
+}
+
+.pricing .card .certifi a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+    background: #f8f9fa;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+.skill-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.project-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: #e5e7eb;
+    color: #4b5563;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #1d4ed8;
+    font-weight: 500;
+    margin-top: auto;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #1e40af;
+}
+
+.project-link svg {
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover svg {
+    transform: translate(3px, -3px);
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-section {
+    margin-bottom: 2rem;
+}
+
+.about-section:last-child {
+    margin-bottom: 0;
+}
+
+.about-section h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-section p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.education-list {
+    list-style: none;
+    padding: 0;
+}
+
+.education-list li {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.education-list li:last-child {
+    margin-bottom: 0;
+}
+
+.year {
+    color: #1d4ed8;
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-width: 60px;
+}
+
+.education-detail h4 {
+    color: #333;
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+}
+
+.education-detail p {
+    margin: 0;
+    color: #666;
+}
+
+.graduation-status {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.expected {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.completed {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.contact-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #1d4ed8;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #f3f4f6;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+.contact-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (width < 600px) {
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.status-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+}
+
+.status-tag.expected {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-tag.completed {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.education-detail h4 {
+    color: #333;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.media-card {
+    background: transparent;
+    border-radius: 15px;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-5px);
+}
+
+.media-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%; 
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.media-wrapper img,
+.media-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: transparent;
+}
+
+.video-wrapper {
+    padding-top: 56.25%;
+    background: #18181B; 
+}
+
+/* 경력 섹션 스타일 수정 */
+.section-c {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.career {
+    position: relative;
+    padding-top: 66.67%; 
+    background: transparent;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.career img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 모바일 반응형 조정 */
+@media (width < 768px) {
+    .media-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .section-c {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .media-wrapper,
+    .career {
+        padding-top: 75%; 
+    }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .card, .career img, .certifi video {
+        max-width: 100%;
+    }
+    
+    .overlay-text {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.certificates-grid img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.certificates-grid img:hover {
+    transform: translateY(-5px);
+}
+
+.hardware-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hardware-card {
+    position: relative;
+    aspect-ratio: 4/3;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #27272a;
+}
+
+.hardware-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hardware-card:hover img {
+    transform: scale(1.05);
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.hardware-card:hover .overlay-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #27272a;
+    aspect-ratio: 16/9;
+    width: 100%;
+}
+
+.video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #27272a;
+}
+
+@media (max-width: 768px) {
+    .certificates-grid,
+    .hardware-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+p {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+}
+
+.project-description {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+}
+
+.tech-tag {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+}
+
+.contact-link {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+}
+
+footer, .copyright {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+}
+
+.nav-links a {
+    font-family: 'Pretendard', sans-serif;
+}
+
+.about-section p {
+    font-family: 'Pretendard', sans-serif;
+}
+
+.education-detail p {
+    font-family: 'Pretendard', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Gaegu', cursive;
+}
+
+.header {
+    font-family: 'Gaegu', cursive;
+}
+
+.about-section h3 {
+    font-family: 'Gaegu', cursive;
+}
+
+.project-card h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.skill-card h3 {
+    font-family: 'Gaegu', cursive;
+}
+
+.education-detail h4 {
+    font-family: 'Gaegu', cursive;
+}
+
+p, .project-description, .tech-tag, .contact-link, footer, .copyright, .nav-links a, .about-section p, .education-detail p {
+    font-family: 'Pretendard', sans-serif;
+}
+
+.about-card,
+.skill-card,
+.project-card {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.about-card h3,
+.skill-card h3 {
+    font-family: 'Gaegu', cursive;
+}
+
+.project-card h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.project-description {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+}
+
+.tech-tag {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+}
+
+.about-section p,
+.education-detail p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.education-detail h4 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.graduation-status {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+ul, li {
+    font-family: 'Gaegu', cursive;
+}
+
+.tech-stack,
+.tech-stack li,
+.project-card ul,
+.project-card li {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.education-list,
+.education-list li {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nav-links,
+.nav-links li,
+.nav-links a {
+    font-family: 'Gaegu', cursive;
+    font-size: 1.8rem;
+}
+
+footer .column h4,
+footer .column a {
+    font-family: 'Gaegu', cursive;
+}
+
+footer .column > a {
+    font-size: 1.5rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+p, .project-description, .tech-tag, .contact-link, .copyright, .about-section p, .education-detail p {
+    font-family: 'Pretendard', sans-serif;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Gaegu', cursive;
+}
+
+.footer-link:hover {
+    color: #1d4ed8;
+}
+
+.footer-link svg {
+    width: 24px;
+    height: 24px;
+}
